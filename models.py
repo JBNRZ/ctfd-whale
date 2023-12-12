@@ -36,6 +36,7 @@ class WhaleRedirectTemplate(db.Model):
 
 class DynamicDockerChallenge(Challenges):
     __mapper_args__ = {"polymorphic_identity": "dynamic_docker"}
+    function = "logarithmic"
     id = db.Column(None, db.ForeignKey("challenges.id",
                                        ondelete="CASCADE"), primary_key=True)
 
